@@ -1,15 +1,13 @@
 %define upstream_name    Getopt-OO
-%define upstream_version 0.07
-
 Name:		perl-%{upstream_name}
-Version:	%perl_convert_version %{upstream_version}
-Release:	5
+Version:	0.07
+Release:	6
 
 Summary:	An object oriented command line parser.  It handles
 License:	GPL+ or Artistic
 Group:		Development/Perl
-Url:		https://search.cpan.org/dist/%{upstream_name}
-Source0:	http://www.cpan.org/modules/by-module/Getopt/%{upstream_name}-%{upstream_version}.tar.gz
+Url:		https://metacpan.org/dist/%{upstream_name}
+Source0:	http://www.cpan.org/modules/by-module/Getopt/%{upstream_name}-%{version}.tar.gz
 
 BuildRequires:	make
 BuildRequires:	perl-devel
@@ -41,7 +39,7 @@ you were expecting '-xv --hello' as possible command line options, the keys
 for your template hash would be '-x', '-v', and '--hello'.
 
 %prep
-%setup -q -n %{upstream_name}-%{upstream_version}
+%setup -q -n %{upstream_name}-%{version}
 
 %build
 perl Makefile.PL INSTALLDIRS=vendor
@@ -65,8 +63,7 @@ make test
 
 * Tue Jul 28 2009 Jérôme Quelin <jquelin@mandriva.org> 0.70.0-1mdv2011.0
 + Revision: 401656
-- rebuild using %%perl_convert_version
-- fixed license field
+- rebuild using %0.07 fixed license field
 
 * Fri Jan 30 2009 Olivier Thauvin <nanardon@mandriva.org> 0.07-1mdv2009.1
 + Revision: 335604
