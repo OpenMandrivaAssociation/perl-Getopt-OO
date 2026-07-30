@@ -1,13 +1,14 @@
 %define upstream_name    Getopt-OO
+%define upstream_version 0.07
 Name:		perl-%{upstream_name}
 Version:	0.07
-Release:	6
+Release:	1
 
 Summary:	An object oriented command line parser.  It handles
 License:	GPL+ or Artistic
 Group:		Development/Perl
 Url:		https://metacpan.org/dist/%{upstream_name}
-Source0:	http://www.cpan.org/modules/by-module/Getopt/%{upstream_name}-%{version}.tar.gz
+Source0:	https://cpan.metacpan.org/authors/id/S/SJ/SJSMITH/Getopt-OO-0.07.tar.gz
 
 BuildRequires:	make
 BuildRequires:	perl-devel
@@ -55,21 +56,4 @@ make test
 %doc README Changes
 %{_mandir}/man3/*
 %{perl_vendorlib}/*
-
-%changelog
-* Sun Apr 17 2011 Funda Wang <fwang@mandriva.org> 0.70.0-2mdv2011.0
-+ Revision: 654196
-- rebuild for updated spec-helper
-
-* Tue Jul 28 2009 Jérôme Quelin <jquelin@mandriva.org> 0.70.0-1mdv2011.0
-+ Revision: 401656
-- rebuild using %0.07 fixed license field
-
-* Fri Jan 30 2009 Olivier Thauvin <nanardon@mandriva.org> 0.07-1mdv2009.1
-+ Revision: 335604
-- import perl-Getopt-OO
-
-
-* Fri Jan 30 2009 cpan2dist 0.07-1mdv
-- initial mdv release, generated with cpan2dist
 
