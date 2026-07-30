@@ -2,7 +2,7 @@
 %define upstream_version 0.07
 Name:		perl-%{upstream_name}
 Version:	0.07
-Release:	2
+Release:	3
 
 Summary:	An object oriented command line parser.  It handles
 License:	GPL+ or Artistic
